@@ -4,10 +4,12 @@ import useCurrentUserName from './useCurrentUserName'
 import { fetchProfileData } from './fakeApi'
 
 function ProfileDetails({ initialResource }) {
-  return <h1>{useCurrentUser(initialResource).name}</h1>;
+  const currentUser = useCurrentUser(initialResource);
+  return <h1>{currentUser.name}</h1>;
 }
 function ProfileDetailsName(anchorElement) {
-  return <h2>{useCurrentUserName(anchorElement)}</h2>;
+  const currentUserName = useCurrentUserName(anchorElement);
+  return <h2>{currentUserName}</h2>;
 }
 function ProfilePage() {
 
